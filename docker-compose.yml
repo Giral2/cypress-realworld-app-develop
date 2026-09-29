@@ -1,0 +1,16 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: cypress_realworld_app
+    ports:
+      - "3000:3000"
+      - "3001:3001"
+    environment:
+      - NODE_ENV=development
+      - PORT=3000
+      - VITE_BACKEND_PORT=3001
+    volumes:
+      # Montar el archivo de base de datos para persistir cambios en desarrollo
+      - ./data:/app/data

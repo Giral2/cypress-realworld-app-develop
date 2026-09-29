@@ -1,0 +1,9 @@
+node_modules
+build
+dist
+.git
+.husky/_
+cypress/videos
+cypress/screenshots
+.nyc_output
+coverage
